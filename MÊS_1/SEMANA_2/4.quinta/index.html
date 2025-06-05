@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contagem Regressiva</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #121212;
+        color: white;
+        text-align: center;
+        margin-top: 100px;
+      }
+      h1 {
+        font-size: 80px;
+      }
+      .mensagem {
+        font-size: 40px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="contador">10</h1>
+    <div class="mensagem" id="mensagem"></div>
+
+    <script>
+      function contagemRegressiva() {
+        const contador = document.getElementById("contador");
+        const mensagem = document.getElementById("mensagem");
+
+        for (let i = 10; i >= 1; i--) {
+          setTimeout(() => {
+            contador.textContent = i;
+          }, (10 - i) * 1000);
+        }
+
+        setTimeout(() => {
+          contador.textContent = "🚀";
+          mensagem.textContent = "Lançamento!";
+        }, 10 * 1000);
+      }
+
+      contagemRegressiva();
+    </script>
+  </body>
+</html>
