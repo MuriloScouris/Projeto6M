@@ -1,0 +1,68 @@
+\*\*sintaxe de funções nomeadas:
+
+function nomeDaFuncao() {
+//código
+}
+
+-são funções tradicionais
+-podem ser chamadas antes ou depois da declaração no código.
+
+\*\*arrow functions:
+
+const soma = (a, b) => a + b;
+
+-mais compacta
+-muito usada em funções simples
+
+- se houver mais de uma linha , precisa de {} e return;
+
+\*\*parâmetros opcionais, padrão e retorno:
+
+function saudação(nome = "Visitante") {
+return `Olá, ${nome}!`;
+}
+
+## -return devolve o valor para quem chamou a função
+
+🚀 Quem "chamou" a função foi essa linha aqui:
+javascript
+Copiar
+Editar
+const resultado = somar(Number(a), Number(b));
+👉 Quando você escreve somar(Number(a), Number(b)), você está chamando a função somar, passando dois valores como parâmetros.
+
+✔️ Quem recebe o que a função retorna é a variável resultado.
+
+🔥 Funciona assim passo a passo:
+O Node executa essa linha:
+
+javascript
+Copiar
+Editar
+const resultado = somar(Number(a), Number(b));
+Ele entra dentro da função somar() e faz:
+
+javascript
+Copiar
+Editar
+return a + b;
+O valor que sai do return (ex.: 5 + 3 = 8) vai direto para onde a função foi chamada, ou seja:
+
+javascript
+Copiar
+Editar
+const resultado = 8;
+Depois disso, o código continua e mostra:
+
+javascript
+Copiar
+Editar
+console.log(`O resultado da soma é: ${resultado}`);
+🔥 Resumindo:
+🔸 Quem chamou: essa linha →
+
+javascript
+Copiar
+Editar
+const resultado = somar(Number(a), Number(b));
+🔸 Quem recebeu: a variável resultado.
